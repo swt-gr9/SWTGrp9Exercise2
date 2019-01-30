@@ -44,6 +44,7 @@ namespace Calculator
             return Accumulator;
         }
 
+
         public double Divide(double dividend, double divisor)
         {
             if (divisor == 0.0)
@@ -57,6 +58,19 @@ namespace Calculator
         {
             Accumulator = 0;
         }
+
+        public double Add(double a)
+        {
+            Accumulator = Accumulator + a;
+            return Accumulator;
+        }
+
+        public double Subtract(double a)
+        {
+            Accumulator = Accumulator-a;
+            return Accumulator;
+        }
+        
 
         public double Divide(double divisor)
         {
