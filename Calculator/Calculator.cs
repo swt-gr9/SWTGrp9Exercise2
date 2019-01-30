@@ -8,6 +8,7 @@ namespace Calculator
 {
     public class Calculator
     {
+        public double Accumulator { get; private set; }
         public double Add(double a, double b)
         {
             Accumulator = a + b;
@@ -38,6 +39,12 @@ namespace Calculator
 
             return dividend / divisor;
         }
+
+        public void Clear()
+        {
+            Accumulator = 0;
+        }
+        
 
     }
 }

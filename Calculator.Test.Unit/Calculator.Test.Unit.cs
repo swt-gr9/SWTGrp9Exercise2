@@ -71,5 +71,20 @@ namespace Calculator.Test.Unit
             Assert.That(uut.Divide(a, b), Is.EqualTo(result));
         }
 
+        [TestCase(1, 0, 0.0)]
+        [TestCase(5, 2, 0)]
+        [TestCase(10, -2, 0)]
+        [TestCase(5, 10, 0)]
+        public void Clear_DoDifferentCommandsandClear_ReturnResult(double a, double b, double result)
+        {
+            uut.Subtract(a, b);
+            uut.Add(a, b);
+            uut.Clear();
+            
+            Assert.That(uut.Accumulator, Is.EqualTo(result));
+        }
+
+
+
     }
 }
