@@ -65,7 +65,7 @@ namespace Calculator.Test.Unit
         [TestCase(1, 0)]
         public void divideZeroThrowException(double a, double b)
         {
-            Assert.That(uut.Divide(a,b), Throws(System.DivideByZeroException));
+            Assert.That(uut.Divide(a,b),Throws.TypeOf<System.DivideByZeroException>());
         }
 
         [TestCase(1, 0, 0.0)]
