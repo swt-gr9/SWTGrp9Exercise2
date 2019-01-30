@@ -51,6 +51,16 @@ namespace Calculator.Test.Unit
         {
             Assert.That(uut.Power(a,b), Is.EqualTo(result));
         }
+        [TestCase(2,4,6)]
+        [TestCase(0, 0, 0)]
+        [TestCase(2, -4, -2)]
+        [TestCase(1, 4, 5)]
+        public void getAccumulatorAfterSubtractAndAdd(double a, double b, double result)
+        {
+            uut.Subtract(a, b);
+            uut.Add(a, b);
+            Assert.That(uut.Accumulator, Is.EqualTo(result));
+        }
 
     }
 }
