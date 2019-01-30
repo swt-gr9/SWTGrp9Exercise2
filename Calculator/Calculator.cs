@@ -58,7 +58,6 @@ namespace Calculator
             Accumulator = Accumulator-a;
             return Accumulator;
         }
-
-        public double Accumulator { get; private set; }
+        
     }
 }
