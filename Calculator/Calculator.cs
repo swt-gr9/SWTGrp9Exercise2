@@ -34,10 +34,11 @@ namespace Calculator
         }
         public double Divide(double dividend, double divisor)
         {
-            if ((dividend == 0) || (divisor == 0))
-                return 0;
+            if (divisor == 0.0)
+                throw new System.DivideByZeroException();
 
-            return dividend / divisor;
+            Accumulator = dividend / divisor;
+            return Accumulator;
         }
 
         public void Clear()
