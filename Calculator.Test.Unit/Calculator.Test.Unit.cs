@@ -68,7 +68,6 @@ namespace Calculator.Test.Unit
             Assert.That(uut.Divide(a,b),Throws.TypeOf<System.DivideByZeroException>());
         }
 
-        [TestCase(1, 0, 0.0)]
         [TestCase(5, 2, 2.5)]
         [TestCase(10, -2, -5.0)]
         [TestCase(5, 10, 0.5)]
