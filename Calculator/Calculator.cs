@@ -8,6 +8,7 @@ namespace Calculator
 {
     public class Calculator
     {
+        public double Accumulator { get; private set; }
         public double Add(double a, double b)
         {
             Accumulator = a + b;
@@ -34,10 +35,16 @@ namespace Calculator
 
         public double Divide(double dividend, double divisor)
         {
-            if ((dividend == 0) || (divisor == 0))
-                return 0;
+            if (divisor == 0.0)
+                throw new System.DivideByZeroException();
 
-            return dividend / divisor;
+            Accumulator = dividend / divisor;
+            return Accumulator;
+        }
+
+        public void Clear()
+        {
+            Accumulator = 0;
         }
 
         public double Add(double a)
