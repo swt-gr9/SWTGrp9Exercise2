@@ -40,6 +40,5 @@ namespace Calculator
             return Accumulator;
         }
 
-        public double Accumulator { get; private set; }
     }
 }
