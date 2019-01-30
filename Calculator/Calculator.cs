@@ -31,6 +31,14 @@ namespace Calculator
             Accumulator = Math.Pow(x, exp);
             return Accumulator;
         }
+        public double Divide(double dividend, double divisor)
+        {
+            if ((dividend == 0) || (divisor == 0))
+                return 0;
+
+            return dividend / divisor;
+        }
+
         public double Accumulator { get; private set; }
     }
 }
