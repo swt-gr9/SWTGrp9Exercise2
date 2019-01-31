@@ -62,7 +62,7 @@ namespace Calculator.Test.Unit
             Assert.That(uut.Accumulator, Is.EqualTo(result));
         }
 
-        [TestCase(1, 0)]
+        [TestCase(1, 0.0)]
         public void divideZeroThrowException(double a, double b)
         {
             Assert.That(uut.Divide(a,b),Throws.TypeOf<System.DivideByZeroException>());
