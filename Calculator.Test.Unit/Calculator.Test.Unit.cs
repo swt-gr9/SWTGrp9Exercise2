@@ -89,7 +89,35 @@ namespace Calculator.Test.Unit
             Assert.That(uut.Accumulator, Is.EqualTo(result));
         }
 
-
-
+        [TestCase(0, 0.0)]
+        [TestCase(2,50)]
+        [TestCase(5, 20)]
+        public void DivideNumbersAccumulator_ReturnCorrect(double divisor, double result)
+        {
+            uut.Add(50, 50);
+            Assert.That(uut.Divide(divisor), Is.EqualTo(result));
+        }
+        [TestCase(2, 4)]
+        [TestCase(4, 16)]
+        [TestCase(0, 1)]
+        public void powerNumbersAccumulator_ReturnCorrect(double exp, double result)
+        {
+            uut.Add(1, 1);
+            Assert.That(uut.Power(exp), Is.EqualTo(result));
+        }
+        [TestCase(0, 0)]
+        [TestCase(100, 200)]
+        [TestCase(-2, -4)]
+        public void multiplyNumberAccumulator_ReturnCorrect(double a, double result)
+        {
+            uut.Add(1, 1);
+            Assert.That(uut.Multiply(a), Is.EqualTo(result));
+        }
+        [TestCase(-2, 4)]
+        public void multiplyNumberAccumulatorNegativ_ReturnCorrect(double a, double result)
+        {
+            uut.Add(-1, -1);
+            Assert.That(uut.Multiply(a), Is.EqualTo(result));
+        }
     }
 }
