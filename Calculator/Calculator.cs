@@ -75,7 +75,7 @@ namespace Calculator
         public double Divide(double divisor)
         {
             if ((divisor == 0))
-                return 1; //Skal returne 0
+                return 0; 
 
             Accumulator = (Accumulator / divisor);
             return Accumulator;
