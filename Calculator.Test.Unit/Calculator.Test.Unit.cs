@@ -70,6 +70,7 @@ namespace Calculator.Test.Unit
 
         [TestCase(5, 2, 2.5)]
         [TestCase(10, -2, -5.0)]
+        [TestCase(20, 0.5, 40)]
         [TestCase(5, 10, 0.5)]
         public void DivideNumbers_ReturnCorrect(double a, double b, double result)
         {
