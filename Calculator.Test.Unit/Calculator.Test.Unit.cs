@@ -120,5 +120,28 @@ namespace Calculator.Test.Unit
             uut.Add(-1, -1);
             Assert.That(uut.Multiply(a), Is.EqualTo(result));
         }
+
+
+        [TestCase(1,2,3)]
+        [TestCase(100, 200, 300)]
+        [TestCase(-2, -4, -6)]
+        public void AddOverloaded_Returns_Correct(double a, double b, double result)
+        {
+            uut.Add(a);
+            uut.Add(b);
+
+            Assert.That(uut.Accumulator, Is.EqualTo(result));
+        }
+
+        [TestCase(1, 2, -3)]
+        [TestCase(100, 200, -300)]
+        [TestCase(-2, -4, 6)]
+        public void SubtractOverloaded_Returns_Correct(double a, double b, double result)
+        {
+            uut.Subtract(a);
+            uut.Subtract(b);
+
+            Assert.That(uut.Accumulator, Is.EqualTo(result));
+        }
     }
 }
